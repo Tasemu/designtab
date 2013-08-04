@@ -1,0 +1,1116 @@
+/*
+Theme Name: DesignTab
+Theme URI: http://designtab.me/
+Author: Montague Monro
+Description: Wordpress theme design for DesignTab
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: design, designtab, web development, dev, web design, webdesign
+*/
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: royalblue;
+}
+a:visited {
+	color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+[class*="content"]:before,
+[class*="content"]:after,
+[class*="site"]:before,
+[class*="site"]:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+[class*="content"]:after,
+[class*="site"]:after {
+	clear: both;
+}
+
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	position: absolute;
+		top: 1.5em;
+		left: 0;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled-on .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* =Structure
+----------------------------------------------- */
+
+
+/* Custom Styles */
+
+/* Variables */
+
+$site-width: 960px;
+$background-colour: #eae5da;
+$header-colour: #121213;
+$footer-colour: $header-colour;
+$navigation-colour: #dad5c9;
+$nav-border-colour: 1px solid #cec9bf;
+$social-box-colour: $background-colour;
+$social-box-border-colour: #c7c3ba;
+$content-colour: #f4f1eb;
+$content-border-colour: 1px solid #cec9bf;
+$sidebar-colour: $content-colour;
+$sidebar-border-colour: 1px solid #cec9bf;
+$search-colour: $background-colour;
+$search-border-colour: #beb9af;
+$footer-colour: $header-colour;
+
+/* Styles */
+
+/* Text */
+
+a {
+	color: #333333;
+
+	&:visited {
+		color: #333333;
+
+	}
+}
+
+h1 {
+
+	font-size: 24pt;
+
+	a {
+		font-weight: bold;
+		&:hover {
+			color: #777777;
+		}
+	}
+}
+
+h2 {
+	font-size: 18pt;
+}
+
+h3 {
+	font-size: 14pt;
+}
+
+/* Blog/Home */
+
+.blog, .page, .search, .archive, .category {
+	
+	#primary {
+	float: left;
+	margin: 0 -33% 0 0;
+	width: 100%;
+	}
+	#content {
+	margin: 0 38% 0 0;
+	}
+	#secondary { /* Sidebar 1 */
+	float: right;
+	overflow: hidden;
+	width: 27%;
+	}
+	#tertiary { /* Sidebar 2 */
+	float: right;
+	overflow: hidden;
+	width: 27%;
+	margin-top: 15px;
+	}
+	.site-footer {
+	clear: both;
+	width: 100%;
+	}
+
+	.hentry {
+		overflow: auto;
+		border-bottom: $content-border-colour;
+		padding: 25px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		&:first-child {
+			margin-top: 25px;
+		}
+	}
+
+	.paging-navigation {
+		padding: 25px;
+	}
+
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	background-color: $background-colour;
+}
+
+.site {
+	width: $site-width;
+	margin: 0 auto;
+}
+
+.site-header {
+	background-color: $header-colour;
+}
+
+.main-navigation {
+	background-color: $navigation-colour;
+	border: $nav-border-colour;
+	line-height: 2.5em;
+	
+	a {
+		color: #338996;
+		text-shadow: 0 1px 0 #fff;
+		&:visited {
+			color: #338996;
+		}
+		&:hover {
+			color: #56686B;
+		}
+	}
+
+	li {
+		margin-right: 20px;
+	}
+
+}
+
+.site-main {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.site-content {
+	background-color: $content-colour;
+	border: $content-border-colour;
+}
+
+.widget-area {
+	background-color: $sidebar-colour;
+	border: $sidebar-border-colour;
+	padding: 25px;
+
+	h2 {
+		font-size: 14pt;
+		line-height: 3em;
+	}
+}
+
+.site-footer {
+	background-color: $footer-colour;
+}
+
+.hentry-thumb {
+	float: left;
+}
+
+.hentry-info {
+	float: right;
+	width: 353px;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.entry-title {
+	font-size: 18pt;
+}
+
+.site-title {
+	margin: 25px 0;
+	float: left;
+}
+
+.search-form {
+	float: right;
+	width: 310px;
+
+	.search-field {
+		width: 75%;
+		margin-right: 0;
+		border-radius: 0;
+	}
+	.search-submit {
+		background-color: #4790CC;
+		color: #eeeeee;
+		border-radius: 0;
+		border-color: #999;
+		box-shadow: none;
+		text-shadow: 0 1px 0 #333;
+		margin-left: 0;
+	}
+}
+
+input.sidebar-text-field, .sidebar-text-field {
+	border-radius: 0;
+	width: 150px;
+}
+
+input.blue-submit, .blue-submit {
+	background-color: #4790CC;
+	color: #eeeeee;
+	border-radius: 0;
+	border-color: #999;
+	box-shadow: none;
+	text-shadow: 0 1px 0 #333;
+	margin-left: 0;
+}
+
+.btn-large {
+	padding: 10px;
+	margin: 20px;
+}
+
+input.brown-submit, .brown-submit {
+	background-color: #B26B00;
+	color: #eeeeee;
+	border-radius: 0;
+	border-color: #444;
+	box-shadow: none;
+	text-shadow: 0 1px 0 #333;
+	margin-left: 0;
+}
+
+.social-box {
+	height: 54px;
+	width: 310px;
+	margin: 27px 0;
+	background-color: $background-colour;
+	float: right;
+
+	ul {
+		margin-left: 0px;
+		li {
+			list-style-type: none;
+			display: block;
+			background-color: $background-colour;
+			border-right: $sidebar-border-colour;
+			float: left;
+			height: 49px;
+			width: 33%;
+			margin: 0;
+			text-align: center;
+			font-size: 18pt;
+			padding: 5px 0;
+			line-height: 1em;
+
+			.like-status {
+				font-size: 8pt;
+			}
+
+			img {
+				
+			}
+
+		}
+	}
+
+}
+
+.entry-meta {
+	color: #338996;
+	a {
+		color: #56686B;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.main-navigation ul ul {
+	background-color: $background-colour;
+	top: 41px;
+
+	li {
+		padding-left: 15px;
+	}
+}
+
+.site-info {
+	padding: 15px 0;
+	color: #999;
+	float: left;
+	h2 {
+		font-size: 18pt;
+	}
+	ul {
+		margin: 0;
+		list-style-type: none;
+	}
+	a {
+		color: #999;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-logo {
+	color: #999;
+	font-size: 12pt;
+	float: right;
+	margin-top: 20px;
+}
+
+.post-navigation, .comments-area {
+	padding: 25px;
+}
+
+
+/* Single Page CSS */
+
+.single-post {
+	#primary {
+		float: left;
+		margin: 0;
+		width: 100%;
+	}
+		#content {
+		margin: 0;
+	}
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+
+	.entry-header {
+		border-bottom: $content-border-colour;
+		overflow: auto;
+
+		.left {
+			border-right: $content-border-colour;
+			width: 58%;
+			padding: 25px 25px 0 25px;
+			overflow: auto;
+			float: left;
+			height: 200px;
+		}
+
+		.right {
+			float: right;
+			width: 36.6%;
+
+			.difficulty-info {
+				padding: 25px 25px 0 25px;
+				border-bottom: $content-border-colour;
+				line-height: 0.7em;
+			}
+
+			.social {
+				padding: 10px 25px;
+				border-bottom: $content-border-colour;
+			}
+
+			.download {
+				text-align: center;
+			}
+		}
+
+	}
+
+	.post {
+
+		border-bottom: $content-border-colour;
+
+		.entry-content {
+			padding: 20px;
+			border-bottom: $content-border-colour;
+
+			.image-box {
+				width: 90%;
+				padding: 5%;
+				background-color: $background-colour;
+				border: $nav-border-colour;
+			}
+
+			h1, h2, h3 {
+				line-height: 2.5em;
+			}
+
+			a {
+				color: #777;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+			blockquote {
+				font-family: Georgia, serif;
+				font-size: 18px;
+				font-style: italic;
+				width: 500px;
+				margin: 0.25em 0;
+				padding: 0.25em 40px;
+				line-height: 1.45;
+				position: relative;
+				color: #777;
+			}
+
+			blockquote:before {
+			display: block;
+			content: "\201C";
+			font-size: 80px;
+			position: absolute;
+			left: -5px;
+			top: -20px;
+			color: #888;
+			}
+
+			blockquote cite {
+			color: #999999;
+			font-size: 14px;
+			display: block;
+			margin-top: 5px;
+			}
+			 
+			blockquote cite:before {
+			content: "\2014 \2009";
+			}
+
+		}
+		.entry-meta {
+			padding: 20px 20px 20px 0;
+		}
+
+		footer.entry-meta {
+			padding: 20px;
+		}
+	}
+
+	.comments-area {
+		border-top: $content-border-colour;
+
+		.comment-list {
+			margin-top: 35px;
+			margin-bottom: 35px;
+		}
+
+	}
+
+}
+
+/* Page Specific CSS */
+
+.page {
+	
+	
+
+}
+
+/* Search Specific CSS */
+
+.search, .archive, .category {
+	
+	header.page-header {
+		padding: 25px;
+	}
+
+	.page-content {
+		padding: 25px;	
+	}
+
+}
+
+/* Archive specific CSS */
+
+.archive {
+	
+	.archive-header {
+		background-color: $content-colour;
+		border: $content-border-colour;
+		margin: 0 38% 25px 0;
+	}
+
+}
+
+.bbpress {
+	
+	#primary {
+		float: left;
+		margin: 0;
+		width: 100%;
+	}
+		#content {
+		margin: 0;
+	}
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+	.widget-area {
+		display: none;
+	}
+
+	.hentry:first-child {
+		margin-top: 0;
+	}
+
+	bbp-search-form, bbp-breadcrumb {
+		margin-bottom: 15px;
+	}
+
+}
