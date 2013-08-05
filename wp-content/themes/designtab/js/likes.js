@@ -1,34 +1,67 @@
 jQuery( document ).ready( function( $ ) {
 
-	$('.social-box li:first-child').hover(function() {
-		$('#fblike').fadeOut('fast', function() {
-			$('#fbinfo').fadeIn('fast');
+	var isHoveringFB = false;
+
+	$('.social-box li:first-child .socialover').hover(function() {
+		isHoveringFB = true;
+
+		$('#fblike').stop().fadeOut('fast', function() {
+			
+			if(isHoveringFB)	
+			{
+				$('#fbinfo').fadeIn('fast');
+			}
 		});
 	}, function() {
-		$('#fbinfo').fadeOut('fast', function() {
+		isHoveringFB = false;
+		$('#fbinfo').fadeOut('fast', function(){
 			$('#fblike').fadeIn('fast');
 		});
+		
 	});
 
-	$('.social-box li:nth-child(2)').hover(function() {
-		$('#twitterlike').fadeOut('fast', function() {
-			$('#twitterinfo').fadeIn('fast');
+	var isHoveringTW = false;
+
+	$('.social-box li:nth-child(2) .socialover').hover(function() {
+		isHoveringTW = true;
+
+		$('#twitterlike').stop().fadeOut('fast', function() {
+			
+			if(isHoveringTW)	
+			{
+				$('#twitterinfo').fadeIn('fast');
+			}
 		});
 	}, function() {
-		$('#twitterinfo').fadeOut('fast', function() {
+		isHoveringTW = false;
+		$('#twitterinfo').fadeOut('fast', function(){
 			$('#twitterlike').fadeIn('fast');
 		});
+		
 	});
 
-	$('.social-box li:nth-child(3)').hover(function() {
-		$('#youtube').fadeOut('fast', function() {
-			$('#youtubeinfo').fadeIn('fast');
+	var isHoveringYT = false;
+
+	$('.social-box li:nth-child(3) .socialover').hover(function() {
+		isHoveringYT = true;
+
+		$('#youtube').stop().fadeOut('fast', function() {
+			
+			if(isHoveringYT)	
+			{
+				$('#youtubeinfo').fadeIn('fast');
+			}
 		});
 	}, function() {
-		$('#youtubeinfo').fadeOut('fast', function() {
+		isHoveringYT = false;
+		$('#youtubeinfo').fadeOut('fast', function(){
 			$('#youtube').fadeIn('fast');
 		});
+		
 	});
+
+
+
 	
 	$.get("https://graph.facebook.com/aaradiome",
 		    function(data) {

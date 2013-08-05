@@ -41,18 +41,21 @@
 							<img src="<?php echo get_template_directory_uri()?>/inc/img/Facebook.png">
 						</div>
 						<div id="fbinfo" style="display:none;"></div>
+						<div class="socialover"></div>
 					</li>
 					<li>
 						<div id="twitterlike">
 							<img src="<?php echo get_template_directory_uri()?>/inc/img/Twitter.png">
 						</div>
 						<div id="twitterinfo" style="display:none;"></div>
+						<div class="socialover"></div>
 					</li>
 					<li>
 						<div id="youtube">
 							<img src="<?php echo get_template_directory_uri()?>/inc/img/Youtube.png">
 						</div>
 						<div id="youtubeinfo" style="display:none;"></div>
+						<div class="socialover"></div>
 					</li>
 				</ul>
 			</div>
