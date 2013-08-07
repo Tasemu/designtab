@@ -433,9 +433,6 @@ a:active {
     display: none; } }
 /* =Content
 ----------------------------------------------- */
-.hentry {
-  margin: 0 0 1.5em; }
-
 .byline,
 .updated {
   display: none; }
@@ -598,10 +595,9 @@ h3 {
   padding: 25px; }
   .blog .hentry:last-child, .page .hentry:last-child, .search .hentry:last-child, .archive .hentry:last-child, .category .hentry:last-child {
     margin: 0; }
-  .blog .hentry:first-child, .page .hentry:first-child, .search .hentry:first-child, .archive .hentry:first-child, .category .hentry:first-child {
-    margin-top: 25px; }
 .blog .paging-navigation, .page .paging-navigation, .search .paging-navigation, .archive .paging-navigation, .category .paging-navigation {
-  padding: 25px; }
+  margin: 0;
+  padding: 5px; }
 
 .group:after {
   content: "";
@@ -609,7 +605,7 @@ h3 {
   clear: both; }
 
 body {
-  background-color: #eae5da; }
+  background-color: #f6f6f6; }
 
 .site {
   width: 960px;
@@ -619,29 +615,30 @@ body {
   background-color: #121213; }
 
 .main-navigation {
-  background-color: #dad5c9;
-  border: 1px solid #cec9bf;
+  background-color: #434343;
   line-height: 2.5em; }
   .main-navigation a {
-    color: #338996;
-    text-shadow: 0 1px 0 #fff; }
+    color: #e1e1e1;
+    text-shadow: 0 1px 0 #010101; }
     .main-navigation a:visited {
-      color: #338996; }
+      color: #e1e1e1; }
     .main-navigation a:hover {
-      color: #56686B; }
+      color: #3A7CC2; }
   .main-navigation li {
-    margin-right: 20px; }
+    padding-right: 20px; }
+    .main-navigation li ul li {
+      background-color: #636161; }
 
 .site-main {
   margin-top: 35px;
   margin-bottom: 35px; }
 
 .site-content {
-  background-color: #f4f1eb;
+  background-color: white;
   border: 1px solid #cec9bf; }
 
 .widget-area {
-  background-color: #f4f1eb;
+  background-color: white;
   border: 1px solid #cec9bf;
   padding: 25px; }
   .widget-area h2 {
@@ -664,7 +661,7 @@ body {
   font-size: 18pt; }
 
 .site-title {
-  margin: 25px 0;
+  margin: 13px 0 0 0;
   float: left; }
 
 .search-form {
@@ -710,17 +707,16 @@ input.brown-submit, .brown-submit {
   margin-left: 0; }
 
 .social-box {
-  height: 54px;
-  width: 310px;
-  margin: 27px 0;
-  background-color: #eae5da;
+  width: 300px;
+  margin: 13px 0;
+  background-color: #f6f6f6;
   float: right; }
   .social-box ul {
     margin-left: 0px; }
     .social-box ul li {
       list-style-type: none;
       display: block;
-      background-color: #eae5da;
+      background-color: #f6f6f6;
       border-right: 1px solid #cec9bf;
       float: left;
       height: 49px;
@@ -748,7 +744,7 @@ input.brown-submit, .brown-submit {
       text-decoration: underline; }
 
 .main-navigation ul ul {
-  background-color: #eae5da;
+  background-color: #f6f6f6;
   top: 41px; }
   .main-navigation ul ul li {
     padding-left: 15px; }
@@ -789,17 +785,23 @@ input.brown-submit, .brown-submit {
   width: 100%; }
 .single-post .entry-header {
   border-bottom: 1px solid #cec9bf;
-  overflow: auto; }
+  overflow: hidden; }
   .single-post .entry-header .left {
-    border-right: 1px solid #cec9bf;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+    overflow-y: hidden;
     width: 58%;
     padding: 25px 25px 0 25px;
     overflow: auto;
     float: left;
     height: 200px; }
   .single-post .entry-header .right {
+    overflow-y: hidden;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
     float: right;
-    width: 36.6%; }
+    width: 36.6%;
+    border-left: 1px solid #cec9bf; }
     .single-post .entry-header .right .difficulty-info {
       padding: 25px 25px 0 25px;
       border-bottom: 1px solid #cec9bf;
@@ -817,7 +819,7 @@ input.brown-submit, .brown-submit {
     .single-post .post .entry-content .image-box {
       width: 90%;
       padding: 5%;
-      background-color: #eae5da;
+      background-color: #f6f6f6;
       border: 1px solid #cec9bf; }
     .single-post .post .entry-content h1, .single-post .post .entry-content h2, .single-post .post .entry-content h3 {
       line-height: 2.5em; }
@@ -870,7 +872,7 @@ input.brown-submit, .brown-submit {
 
 /* Archive specific CSS */
 .archive .archive-header {
-  background-color: #f4f1eb;
+  background-color: white;
   border: 1px solid #cec9bf;
   margin: 0 38% 25px 0; }
 

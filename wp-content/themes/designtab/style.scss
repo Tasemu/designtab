@@ -448,7 +448,6 @@ a:active {
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
 }
 .byline,
 .updated {
@@ -597,14 +596,14 @@ object {
 /* Variables */
 
 $site-width: 960px;
-$background-colour: #eae5da;
+$background-colour: #f6f6f6;
 $header-colour: #121213;
 $footer-colour: $header-colour;
-$navigation-colour: #dad5c9;
-$nav-border-colour: 1px solid #cec9bf;
+$navigation-colour: #434343;
+$nav-border-colour: 1px solid #434343;
 $social-box-colour: $background-colour;
 $social-box-border-colour: #c7c3ba;
-$content-colour: #f4f1eb;
+$content-colour: #fff;
 $content-border-colour: 1px solid #cec9bf;
 $sidebar-colour: $content-colour;
 $sidebar-border-colour: 1px solid #cec9bf;
@@ -683,12 +682,12 @@ h3 {
 		}
 
 		&:first-child {
-			margin-top: 25px;
 		}
 	}
 
 	.paging-navigation {
-		padding: 25px;
+		margin: 0;
+		padding: 5px;
 	}
 
 }
@@ -714,22 +713,28 @@ body {
 
 .main-navigation {
 	background-color: $navigation-colour;
-	border: $nav-border-colour;
 	line-height: 2.5em;
 	
 	a {
-		color: #338996;
-		text-shadow: 0 1px 0 #fff;
+		color: #e1e1e1;
+		text-shadow: 0 1px 0 #010101;
 		&:visited {
-			color: #338996;
+			color: #e1e1e1;
 		}
 		&:hover {
-			color: #56686B;
+			color: #3A7CC2;
 		}
 	}
 
 	li {
-		margin-right: 20px;
+		padding-right: 20px;
+		
+		ul {
+			li {
+				background-color: #636161;
+			}
+		}
+
 	}
 
 }
@@ -777,7 +782,7 @@ body {
 }
 
 .site-title {
-	margin: 25px 0;
+	margin: 13px 0 0 0;
 	float: left;
 }
 
@@ -832,9 +837,9 @@ input.brown-submit, .brown-submit {
 }
 
 .social-box {
-	height: 54px;
-	width: 310px;
-	margin: 27px 0;
+
+	width: 300px;
+	margin: 13px 0;
 	background-color: $background-colour;
 	float: right;
 
@@ -946,10 +951,12 @@ input.brown-submit, .brown-submit {
 
 	.entry-header {
 		border-bottom: $content-border-colour;
-		overflow: auto;
+		overflow: hidden;
 
 		.left {
-			border-right: $content-border-colour;
+			margin-bottom: -2000px;
+			padding-bottom: 2000px;
+			overflow-y: hidden;
 			width: 58%;
 			padding: 25px 25px 0 25px;
 			overflow: auto;
@@ -958,8 +965,12 @@ input.brown-submit, .brown-submit {
 		}
 
 		.right {
+			overflow-y: hidden;
+			margin-bottom: -2000px;
+			padding-bottom: 2000px;
 			float: right;
 			width: 36.6%;
+			border-left: $content-border-colour;
 
 			.difficulty-info {
 				padding: 25px 25px 0 25px;
@@ -991,7 +1002,7 @@ input.brown-submit, .brown-submit {
 				width: 90%;
 				padding: 5%;
 				background-color: $background-colour;
-				border: $nav-border-colour;
+				border: $content-border-colour;
 			}
 
 			h1, h2, h3 {
