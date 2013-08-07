@@ -591,7 +591,7 @@ h3 {
   width: 100%; }
 .blog .hentry, .page .hentry, .search .hentry, .archive .hentry, .category .hentry {
   overflow: auto;
-  border-bottom: 1px solid #cec9bf;
+  border-bottom: 1px dashed #beb9bf;
   padding: 25px; }
   .blog .hentry:last-child, .page .hentry:last-child, .search .hentry:last-child, .archive .hentry:last-child, .category .hentry:last-child {
     margin: 0; }
@@ -605,17 +605,20 @@ h3 {
   clear: both; }
 
 body {
-  background-color: #f6f6f6; }
+  background-image: url("inc/img/debut_light.png"); }
 
 .site {
   width: 960px;
   margin: 0 auto; }
 
 .site-header {
-  background-color: #121213; }
+  background-image: url("inc/img/navy_blue.png"); }
 
 .main-navigation {
-  background-color: #434343;
+  background-image: url("inc/img/debut_dark.png");
+  -webkit-box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.28);
   line-height: 2.5em; }
   .main-navigation a {
     color: #e1e1e1;
@@ -635,7 +638,7 @@ body {
 
 .site-content {
   background-color: white;
-  border: 1px solid #cec9bf; }
+  border: 1px dashed #beb9bf; }
 
 .widget-area {
   background-color: white;
@@ -646,7 +649,7 @@ body {
     line-height: 3em; }
 
 .site-footer {
-  background-color: #121213; }
+  background-image: url("inc/img/navy_blue.png"); }
 
 .hentry-thumb {
   float: left; }
@@ -784,7 +787,7 @@ input.brown-submit, .brown-submit {
   clear: both;
   width: 100%; }
 .single-post .entry-header {
-  border-bottom: 1px solid #cec9bf;
+  border-bottom: 1px dashed #beb9bf;
   overflow: hidden; }
   .single-post .entry-header .left {
     margin-bottom: -2000px;
@@ -801,26 +804,26 @@ input.brown-submit, .brown-submit {
     padding-bottom: 2000px;
     float: right;
     width: 36.6%;
-    border-left: 1px solid #cec9bf; }
+    border-left: 1px dashed #beb9bf; }
     .single-post .entry-header .right .difficulty-info {
       padding: 25px 25px 0 25px;
-      border-bottom: 1px solid #cec9bf;
+      border-bottom: 1px dashed #beb9bf;
       line-height: 0.7em; }
     .single-post .entry-header .right .social {
       padding: 10px 25px;
-      border-bottom: 1px solid #cec9bf; }
+      border-bottom: 1px dashed #beb9bf; }
     .single-post .entry-header .right .download {
       text-align: center; }
 .single-post .post {
-  border-bottom: 1px solid #cec9bf; }
+  border-bottom: 1px dashed #beb9bf; }
   .single-post .post .entry-content {
     padding: 20px;
-    border-bottom: 1px solid #cec9bf; }
+    border-bottom: 1px dashed #beb9bf; }
     .single-post .post .entry-content .image-box {
       width: 90%;
       padding: 5%;
       background-color: #f6f6f6;
-      border: 1px solid #cec9bf; }
+      border: 1px dashed #beb9bf; }
     .single-post .post .entry-content h1, .single-post .post .entry-content h2, .single-post .post .entry-content h3 {
       line-height: 2.5em; }
     .single-post .post .entry-content a {
@@ -858,7 +861,7 @@ input.brown-submit, .brown-submit {
   .single-post .post footer.entry-meta {
     padding: 20px; }
 .single-post .comments-area {
-  border-top: 1px solid #cec9bf; }
+  border-top: 1px dashed #beb9bf; }
   .single-post .comments-area .comment-list {
     margin-top: 35px;
     margin-bottom: 35px; }
@@ -873,7 +876,7 @@ input.brown-submit, .brown-submit {
 /* Archive specific CSS */
 .archive .archive-header {
   background-color: white;
-  border: 1px solid #cec9bf;
+  border: 1px dashed #beb9bf;
   margin: 0 38% 25px 0; }
 
 .bbpress #primary {

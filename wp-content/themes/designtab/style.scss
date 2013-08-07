@@ -604,7 +604,7 @@ $nav-border-colour: 1px solid #434343;
 $social-box-colour: $background-colour;
 $social-box-border-colour: #c7c3ba;
 $content-colour: #fff;
-$content-border-colour: 1px solid #cec9bf;
+$content-border-colour: 1px dashed #beb9bf;
 $sidebar-colour: $content-colour;
 $sidebar-border-colour: 1px solid #cec9bf;
 $search-colour: $background-colour;
@@ -699,7 +699,7 @@ h3 {
 }
 
 body {
-	background-color: $background-colour;
+	background-image: url('inc/img/debut_light.png');
 }
 
 .site {
@@ -708,11 +708,14 @@ body {
 }
 
 .site-header {
-	background-color: $header-colour;
+	background-image: url('inc/img/navy_blue.png');
 }
 
 .main-navigation {
-	background-color: $navigation-colour;
+	background-image: url('inc/img/debut_dark.png');
+	-webkit-box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.28);
+	-moz-box-shadow:    0px -5px 5px rgba(0, 0, 0, 0.28);
+	box-shadow:         0px -5px 5px rgba(0, 0, 0, 0.28);
 	line-height: 2.5em;
 	
 	a {
@@ -761,7 +764,7 @@ body {
 }
 
 .site-footer {
-	background-color: $footer-colour;
+	background-image: url('inc/img/navy_blue.png');
 }
 
 .hentry-thumb {
