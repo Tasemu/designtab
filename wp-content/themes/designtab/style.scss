@@ -681,7 +681,8 @@ h3 {
 			margin: 0;
 		}
 
-		&:first-child {
+		&:nth-child(even) {
+			background: rgb(250, 250, 250);
 		}
 	}
 
@@ -734,7 +735,7 @@ body {
 		
 		ul {
 			li {
-				background-color: #636161;
+				background-image: url('inc/img/navy_blue.png');
 			}
 		}
 
@@ -841,7 +842,7 @@ input.brown-submit, .brown-submit {
 
 .social-box {
 
-	width: 300px;
+	width: 310px;
 	margin: 13px 0;
 	background-color: $background-colour;
 	float: right;
@@ -855,13 +856,17 @@ input.brown-submit, .brown-submit {
 			border-right: $sidebar-border-colour;
 			float: left;
 			height: 49px;
-			width: 33%;
+			width: 102px;
 			margin: 0;
 			text-align: center;
 			font-size: 18pt;
 			padding: 5px 0;
 			line-height: 1em;
 			position: relative;
+
+			&:last-child {
+				border-right: none;
+			}
 
 			.like-status {
 				font-size: 8pt;
@@ -881,6 +886,7 @@ input.brown-submit, .brown-submit {
 
 			}
 		}
+
 	}
 
 }
@@ -896,7 +902,7 @@ input.brown-submit, .brown-submit {
 }
 
 .main-navigation ul ul {
-	background-color: $background-colour;
+	background-image: url('inc/img/navy_blue.png');
 	top: 41px;
 
 	li {

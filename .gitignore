@@ -27,6 +27,7 @@ wp-content/*
 wp-content/plugins/*
 # !wp-content/plugins/my-single-file-plugin.php
 !wp-content/plugins/bbpress/
+!wp-content/plugins/wysija-newsletters/
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
