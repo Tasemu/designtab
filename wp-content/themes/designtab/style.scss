@@ -681,9 +681,6 @@ h3 {
 			margin: 0;
 		}
 
-		&:nth-child(even) {
-			background: rgb(250, 250, 250);
-		}
 	}
 
 	.paging-navigation {
@@ -756,7 +753,7 @@ body {
 .widget-area {
 	background-color: $sidebar-colour;
 	border: $sidebar-border-colour;
-	padding: 25px;
+	padding: 0 25px 25px 25px;
 
 	h2 {
 		font-size: 14pt;
@@ -783,6 +780,8 @@ body {
 
 .entry-title {
 	font-size: 18pt;
+	line-height: 1.2em;
+	margin-bottom: 10px;
 }
 
 .site-title {
@@ -813,6 +812,7 @@ body {
 input.sidebar-text-field, .sidebar-text-field {
 	border-radius: 0;
 	width: 150px;
+	float: left;
 }
 
 input.blue-submit, .blue-submit {
@@ -822,7 +822,12 @@ input.blue-submit, .blue-submit {
 	border-color: #999;
 	box-shadow: none;
 	text-shadow: 0 1px 0 #333;
-	margin-left: 0;
+	margin: 0;
+	float: left;
+}
+
+.wysija-submit,  {
+	margin-top: 0 !important;
 }
 
 .btn-large {
@@ -844,16 +849,16 @@ input.brown-submit, .brown-submit {
 
 	width: 310px;
 	margin: 13px 0;
-	background-color: $background-colour;
+	//background-color: $background-colour;
 	float: right;
-
+	color: #e1e1e1;
 	ul {
 		margin-left: 0px;
 		li {
 			list-style-type: none;
 			display: block;
-			background-color: $background-colour;
-			border-right: $sidebar-border-colour;
+			//background-color: $background-colour;
+			//border-right: $sidebar-border-colour;
 			float: left;
 			height: 49px;
 			width: 102px;
@@ -883,7 +888,6 @@ input.brown-submit, .brown-submit {
 				height: 59px;
 				position: absolute;
 				top: 0px;
-
 			}
 		}
 
@@ -939,6 +943,7 @@ input.brown-submit, .brown-submit {
 
 .post-navigation, .comments-area {
 	padding: 25px;
+	margin: 0 !important;
 }
 
 
@@ -982,7 +987,7 @@ input.brown-submit, .brown-submit {
 			border-left: $content-border-colour;
 
 			.difficulty-info {
-				padding: 25px 25px 0 25px;
+				padding: 10px 25px;
 				border-bottom: $content-border-colour;
 				line-height: 0.7em;
 			}
@@ -1068,6 +1073,17 @@ input.brown-submit, .brown-submit {
 
 		footer.entry-meta {
 			padding: 20px;
+		}
+
+		.post-meta {
+			list-style-type: none;
+			margin: 0;
+			line-height: 1.5em;
+		}
+
+		.post-meta-key {
+			font-weight: bold;
+			margin-right: 10px; 
 		}
 	}
 

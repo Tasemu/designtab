@@ -595,8 +595,6 @@ h3 {
   padding: 25px; }
   .blog .hentry:last-child, .page .hentry:last-child, .search .hentry:last-child, .archive .hentry:last-child, .category .hentry:last-child {
     margin: 0; }
-  .blog .hentry:nth-child(even), .page .hentry:nth-child(even), .search .hentry:nth-child(even), .archive .hentry:nth-child(even), .category .hentry:nth-child(even) {
-    background: #fafafa; }
 .blog .paging-navigation, .page .paging-navigation, .search .paging-navigation, .archive .paging-navigation, .category .paging-navigation {
   margin: 0;
   padding: 5px; }
@@ -645,7 +643,7 @@ body {
 .widget-area {
   background-color: white;
   border: 1px solid #cec9bf;
-  padding: 25px; }
+  padding: 0 25px 25px 25px; }
   .widget-area h2 {
     font-size: 14pt;
     line-height: 3em; }
@@ -663,7 +661,9 @@ body {
     text-decoration: none; }
 
 .entry-title {
-  font-size: 18pt; }
+  font-size: 18pt;
+  line-height: 1.2em;
+  margin-bottom: 10px; }
 
 .site-title {
   margin: 13px 0 0 0;
@@ -687,7 +687,8 @@ body {
 
 input.sidebar-text-field, .sidebar-text-field {
   border-radius: 0;
-  width: 150px; }
+  width: 150px;
+  float: left; }
 
 input.blue-submit, .blue-submit {
   background-color: #4790CC;
@@ -696,7 +697,11 @@ input.blue-submit, .blue-submit {
   border-color: #999;
   box-shadow: none;
   text-shadow: 0 1px 0 #333;
-  margin-left: 0; }
+  margin: 0;
+  float: left; }
+
+.wysija-submit {
+  margin-top: 0 !important; }
 
 .btn-large {
   padding: 10px;
@@ -714,15 +719,13 @@ input.brown-submit, .brown-submit {
 .social-box {
   width: 310px;
   margin: 13px 0;
-  background-color: #f6f6f6;
-  float: right; }
+  float: right;
+  color: #e1e1e1; }
   .social-box ul {
     margin-left: 0px; }
     .social-box ul li {
       list-style-type: none;
       display: block;
-      background-color: #f6f6f6;
-      border-right: 1px solid #cec9bf;
       float: left;
       height: 49px;
       width: 102px;
@@ -778,7 +781,8 @@ input.brown-submit, .brown-submit {
   margin-top: 20px; }
 
 .post-navigation, .comments-area {
-  padding: 25px; }
+  padding: 25px;
+  margin: 0 !important; }
 
 /* Single Page CSS */
 .single-post #primary {
@@ -810,7 +814,7 @@ input.brown-submit, .brown-submit {
     width: 36.6%;
     border-left: 1px dashed #beb9bf; }
     .single-post .entry-header .right .difficulty-info {
-      padding: 25px 25px 0 25px;
+      padding: 10px 25px;
       border-bottom: 1px dashed #beb9bf;
       line-height: 0.7em; }
     .single-post .entry-header .right .social {
@@ -864,6 +868,13 @@ input.brown-submit, .brown-submit {
     padding: 20px 20px 20px 0; }
   .single-post .post footer.entry-meta {
     padding: 20px; }
+  .single-post .post .post-meta {
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.5em; }
+  .single-post .post .post-meta-key {
+    font-weight: bold;
+    margin-right: 10px; }
 .single-post .comments-area {
   border-top: 1px dashed #beb9bf; }
   .single-post .comments-area .comment-list {

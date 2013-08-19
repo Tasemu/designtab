@@ -24,8 +24,7 @@
 		</div>
 		<div class="right">
 			<div class="difficulty-info">
-				<p><strong>Difficulty: </strong>Hard</p>
-				<p><strong>EST Completion Time: </strong>30 Mins</p>
+				<?php the_meta(); ?>
 			</div>
 			<div class="social">
 				<div class="fb-like" data-layout="button_count" data-href="http://facebook.com/aaradiome" data-send="false" data-width="100" data-show-faces="false"></div>

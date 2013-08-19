@@ -68,7 +68,7 @@ jQuery( document ).ready( function( $ ) {
 		     $('#fbinfo').html( "<h1>" + data.likes + "</h1><span class='like-status'>Likes</span>")
 		   }, "json")
 
-	$.getJSON("https://twitter.com/users/Raadiome.json?callback=?",
+	$.getJSON("https://twitter.com/users/MontagueMonro.json?callback=?",
 	 function(data) { 
 	   $('#twitterinfo').append( "<h1>" + data.followers_count + "</h1><span class='like-status'>Followers</span>" );
 	});
