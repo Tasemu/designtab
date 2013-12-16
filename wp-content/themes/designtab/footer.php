@@ -23,7 +23,7 @@
 			</div><!-- .site-info -->
 			<div class="footer-logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
-				<p style="text-align:right;">Copyright 2013 DesignTab</p>
+				<p>Copyright 2013 DesignTab</p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

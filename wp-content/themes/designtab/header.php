@@ -47,7 +47,7 @@
 						<div id="twitterlike">
 							<img src="<?php echo get_template_directory_uri()?>/inc/img/Twitter.png">
 						</div>
-						<div id="twitterinfo" style="display:none;"></div>
+						<div id="twitterinfo" style="display:none;"><h1>42</h1><span class='like-status'>Followers</span></div>
 						<div class="socialover"></div>
 					</li>
 					<li>
@@ -62,10 +62,7 @@
 		</div>
 	</div><!-- #site -->
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div class="site">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'designtab' ); ?></h1>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'designtab' ); ?>"><?php _e( 'Skip to content', 'designtab' ); ?></a></div>
-
+		<div class="site">	
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<span class="search-form"><?php get_search_form(); ?></span>
 		</div>
